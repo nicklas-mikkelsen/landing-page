@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1f2937;
+}
+ul,nav{
+    list-style-type: none; /*Fjerner prikkerne foran links/lists */
+}
+a{
+    text-decoration: none; /*Fjerne streger under links*/
+    cursor: pointer; /*laver mussen om til en hånd, når den er over links*/
+    color: inherit; /*Fjerner farven fra links og gør dem til almindelig tekst, men stadig et link*/
+    
+}
+
+/*Header // øverste linje - Gamle version*/
+/* header { */
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10; */
+    /* width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 35px 100px 0; */
+     /*header bliver en box hvor logo og links bliver skubbet væk med space-between istedet for at lave to bokse og flex-end links*/
+/* }
+nav {
+    display: flex;
+    border: solid red
+}
+header nav {
+    display: flex;
+}
+header nav li {
+    margin: 0 15px;  */
+    /*laver 15px afstand mellem links i header - næsten det samme som gap: 15px;(under nav), men mere præcist*/
+    /* border: solid green
+}
+
+header nav li:first-child{
+    margin-left: 0;
+}
+header nav li:last-child{
+    margin-right: 0;
+} */
+/*Dette gør, at header bliver vist korrekt på mobilenheder*/
+/* @media(max-width:1000px){
+    header{
+        padding: 20px 50px;
+    }
+}
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    header h2{
+        margin-bottom: 15px;
+    }
+    header nav li{
+        margin: 0 7px;
+    }
+} */
+
+header {
+    padding: 0% 100px;
+    max-width: 100%;
+}
+ul.header-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+.header-content li{
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+.header-left{
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url(images/logo.jpg);
+    height: 120px;
+    width: 120px;
+}
+.header-left p{
+
+}
+.header-right{
+    display: flex;    
+    align-items: center;
+    color: white;
+    gap: 20px;
+}
+
+/*Favorite plant area*/
+section.favorite-area{
+    padding: 80px 100px;
+    max-width: 100%;
+}
+ul.favorite-content{
+    width: 100%;
+    display: flex;
+    
+}
+.favorite-content li{
+    /* padding: 20px; */
+    
+    min-height: 400px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    
+}
+.favorite-right{
+    flex-basis: 50%;
+    background-image: url(images/favorit.jpg);
+}
+li.favorite-left{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    align-items: flex-start;
+    /* max-width: 500px; */
+}
+.favorite-left p{
+    max-width: 500px;
+    line-height: 1.5;
+    text-align: left;
+    padding-left: left;
+    color: white;
+    margin-top: 30px;
+}
+a.favorite-btn{
+    padding: 15px 35px; /*gør knappen større*/
+    background: blue;
+    border-radius: 50px; /*gør knappen rund i kanterne*/
+    color: white;
+    margin: 30px 0px;
+    
+
+}
+.favorite-title{
+    color: white;
+    font-size: 48px;
+}
+
+/*Other plants area*/
+section.plants-area{
+    padding: 0px 100px;
+    max-width: 100%;
+    background-color: white;
+}
+ul.plants-content{
+    width: 100%; 
+}
+.plants-content li{
+    min-height: 150px;
+    min-width: 150px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    
+}
+li.plants-1{
+    background-image: url(images/plante1.jpg);
+}
+li.plants-2{
+    background-image: url(images/plante2.jpg);
+}
+li.plants-3{
+    background-image: url(images/plante3.jpg);
+}
+li.plants-4{
+    background-image: url(images/plante4.jpg); 
+}
+li.plants-pictures ul li{
+    border: solid green 4px;
+    border-radius: 30px;
+}
+li.plants-pictures ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+section.plants-area h1{
+    text-align: center;
+    font-size: 36px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+ul.plants-text {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+ul.plants-text li {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+/*Quote area*/
+section.quote-area{
+    padding: 50px 330px;
+    background-color: #E5E7EB;
+    
+}
+p#quote{
+    font-size: 36px;
+    font-family: light;
+    font-style: italic;
+    color: #1F2937;
+    
+}
+p#mette{
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: end;
+}
+
+/*support area*/
+section.support-area{
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    padding: 50px 250px;
+
+}
+ul.support-content {
+    
+    background-color: #3882F6;
+    color: white;
+    height: 150px;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    /* padding: 25px; */
+    border-radius: 30px;
+    align-items: center;
+    
+}
+li.support-right {
+    align-self: center;
+}
+p#support-help {
+    font-size: 36px;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+button.support-btn{
+    padding: 15px 35px; /*gør knappen større*/
+    border: solid white 2px;
+    border-radius: 50px; /*gør knappen rund i kanterne*/
+    color: white;
+    background-color: #3882F6;
+    margin: 30px 0px;
+    
+}
+footer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+/*
+section {
+    border: solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 110px;
+}
+@media(max-width:600px){
+    section{
+        padding: 150px 30px;
+    }
+}
+section p{
+    /* border: solid red; */
+    max-width: 800px; /*laver boksen, hvori teksten står, mindre*/
+    text-align: center; /*centrerer teksten under overskriften 'Mettes favorite plants'*/
+    margin-bottom: 35px; /*skubber 'dont touch it-button' 35px ned fra teksten*/
+    padding: 0 20px; /*gør pladsen, som teksten kan stå på inde i boksen, mindre i sidderne*/
+    line-height: 2; /*skaber mere afstand mellem linjerne i teksten*/
+}
+*/
